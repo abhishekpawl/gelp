@@ -1,6 +1,7 @@
 package main
 
 import (
+	"gelp/npm"
 	"os"
 
 	"github.com/fatih/color"
@@ -8,15 +9,9 @@ import (
 
 var red = color.New(color.FgRed, color.Bold)
 
-/* red.Add(color.Bold) */
-
 var green = color.New(color.FgGreen, color.Bold)
 
-/* green.Add(color.Bold) */
-
 var cyan = color.New(color.FgCyan, color.Bold)
-
-/* cyan.Add(color.Bold) */
 
 func info() {
 	cyan.Println("[COMMANDS]")
@@ -52,7 +47,6 @@ func main() {
 						if value[0] == '-' {
 							red.Println("BAD SYNTAX...")
 						} else if validTech(value) {
-							green.Println(value)
 						} else {
 							red.Println("TECH NOT RECOGNIZED...")
 							info()
@@ -68,6 +62,11 @@ func main() {
 					if !check {
 						red.Println("FLAG MISSING...")
 						info()
+					} else {
+						switch com {
+						case "npm":
+							npm.SpinUpNpm()
+						}
 					}
 				default:
 					red.Println("BAD COMMAND...")
