@@ -1,6 +1,7 @@
 package main
 
 import (
+	"gelp/goHelp"
 	"gelp/npm"
 	"os"
 
@@ -66,6 +67,8 @@ func main() {
 						switch com {
 						case "npm":
 							npm.SpinUpNpm()
+						case "go":
+							goHelp.SpinupGo()
 						}
 					}
 				default:
