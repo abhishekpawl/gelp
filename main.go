@@ -3,6 +3,7 @@ package main
 import (
 	"gelp/goHelp"
 	"gelp/npm"
+	"gelp/react"
 	"os"
 
 	"github.com/fatih/color"
@@ -66,9 +67,11 @@ func main() {
 					} else {
 						switch com {
 						case "npm":
-							npm.SpinUpNpm()
+							npm.SpinupNpm()
 						case "go":
 							goHelp.SpinupGo()
+						case "react":
+							react.SpinupReact()
 						}
 					}
 				default:

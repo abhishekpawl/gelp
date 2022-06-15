@@ -14,7 +14,7 @@ var green = color.New(color.FgGreen, color.Bold)
 
 var cyan = color.New(color.FgCyan, color.Bold)
 
-func SpinUpNpm() {
+func SpinupNpm() {
 	cyan.Print("Enter project name: ")
 	var dir string
 	fmt.Scanln(&dir)
